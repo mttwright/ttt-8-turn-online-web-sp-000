@@ -17,3 +17,7 @@ def valid_move?(board, index)
     false
   end
 end
+
+def input_to_index(input)
+  input - 1
+end
