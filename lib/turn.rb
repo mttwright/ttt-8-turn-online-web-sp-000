@@ -22,7 +22,7 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-def move(board, position, symbol)
+def move(board, position, symbol="X")
   board[position] = symbol
 end
 
@@ -30,7 +30,10 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets
   if valid_move?(input)
-    move(board, input, symbol)
+    move(board, input)
+  else
+    turn(board)
+  end
 end
 
 
