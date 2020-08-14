@@ -23,7 +23,7 @@ def input_to_index(input)
 end
 
 def move(board, position, symbol)
-  if valid_move?(board[position])
+  if valid_move?(board, position)
     board[position] = symbol
   else
     puts "Error!"
